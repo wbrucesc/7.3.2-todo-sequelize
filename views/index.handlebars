@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="top">Todo List</h1>
+  <form action="/add" method="post">
+    <input class="enterNew" type="text" name="newTask" value="" placeholder="Enter new task">
+    <input class="addNew" type="submit" name="" value="Add">
+  </form>
+
+  <ul class="chores">
+    {{#each todos}}
+      {{#unless done}}
+        <li>
+          {{task}}
+          <form class="listForm" action="/completed/{{id}}" method="post">
+            <button class="compButton" type="submit" name="done" value="{{task}}">Mark as complete</button>
+          </form>
+        </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+  <hr>
+
+  <h1 class="bottom">Completed Tasks</h1>
+
+  {{#each results}}
+    {{#if completed.NOTNULL}}
+      <ul class="chores">
+        <li>{{task}}</li>
+      </ul>
+
+    {{/if}}
+  {{/each}}
+</div>
