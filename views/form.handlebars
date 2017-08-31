@@ -1,0 +1,13 @@
+
+<!-- <form action="/edits/id" method="post">
+  <div class="form-group">
+    <label class="form-control-label" for="formGroupExampleInput">Task</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" name="editTask" placeholder="task">
+    <button class="" type="submit" name="button" value=task>Update</button>
+  </div>
+</form> -->
+
+<form class="" action="/edits/{{model.id}}" method="post">
+  <input type="text" name="editTask" value="{{model.task}}" required>
+  <button type="submit" name="button" value="task">Update</button>
+</form>
