@@ -11,7 +11,7 @@ module.exports = function(app){
   todoRouter.get('/', TodoController.list);
   todoRouter.post('/add', TodoController.add);
   todoRouter.get('/edit/:id', TodoController.form);
-  todoRouter.post('/edits/:id', TodoController.edit);
+  todoRouter.post('/edit/:id', TodoController.edit);
 
   todoRouter.post('/completed/:id', TodoController.complete);
 

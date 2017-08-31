@@ -11,7 +11,7 @@
           {{task}}
           <form class="listForm" action="/completed/{{id}}" method="post">
             <button class="compButton" type="submit" name="done" value="{{task}}">Complete</button>
-            <a href="/edit/{{id}}">Edit</a>
+            <button type="button"><a class="edit-button" href="/edit/{{id}}">Edit</a></button>
           </form>
         </li>
     {{/each}}
