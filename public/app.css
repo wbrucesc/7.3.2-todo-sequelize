@@ -51,3 +51,11 @@ body {
 .edit-button {
   text-decoration: none;
 }
+
+.edit-form {
+  display: block;
+}
+
+.home-link {
+  font-size: 10px;
+}

@@ -1,13 +1,14 @@
+<div class="edit-form">
+  <h3>Edit your todo</h3>
 
-<!-- <form action="/edits/id" method="post">
-  <div class="form-group">
-    <label class="form-control-label" for="formGroupExampleInput">Task</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" name="editTask" placeholder="task">
-    <button class="" type="submit" name="button" value=task>Update</button>
+  <div>
+    <form class="" action="/edit/{{model.id}}" method="post">
+      <input class="edit-here" type="text" name="editTask" value="{{model.task}}" required>
+      <button type="submit" name="button" value="task">Update</button>
+      <br>
+
+    </form>
   </div>
-</form> -->
 
-<form class="" action="/edit/{{model.id}}" method="post">
-  <input type="text" name="editTask" value="{{model.task}}" required>
-  <button type="submit" name="button" value="task">Update</button>
-</form>
+</div>
+<a class="home-link" href="/">Back to list</a>
